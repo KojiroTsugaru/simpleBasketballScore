@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3105734E29CFC7A90066E1F2 /* WhoScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105734D29CFC7A90066E1F2 /* WhoScoreView.swift */; };
+		3189F10229DA41E000786D18 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3189F10129DA41E000786D18 /* PlayerModel.swift */; };
+		3189F10529DA42CF00786D18 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3189F10429DA42CF00786D18 /* PlayerViewModel.swift */; };
+		3195812729DA4E1B00EBC8F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3195812629DA4E1B00EBC8F3 /* GoogleService-Info.plist */; };
+		3195812A29DA4E5B00EBC8F3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3195812929DA4E5B00EBC8F3 /* FirebaseFirestore */; };
+		3195812C29DA4E5B00EBC8F3 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3195812B29DA4E5B00EBC8F3 /* FirebaseFirestoreSwift */; };
+		31CCE6DE29DA95A400B42585 /* boxscoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CCE6DD29DA95A400B42585 /* boxscoreView.swift */; };
 		31F352FF29C2F051009F69C3 /* SimpleBasketballScoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F352FE29C2F051009F69C3 /* SimpleBasketballScoreApp.swift */; };
 		31F3530129C2F051009F69C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F3530029C2F051009F69C3 /* ContentView.swift */; };
 		31F3530329C2F053009F69C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31F3530229C2F053009F69C3 /* Assets.xcassets */; };
 		31F3530629C2F053009F69C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31F3530529C2F053009F69C3 /* Preview Assets.xcassets */; };
 		31F3530829C2F053009F69C3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F3530729C2F053009F69C3 /* Persistence.swift */; };
 		31F3530B29C2F053009F69C3 /* SimpleBasketballScore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31F3530929C2F053009F69C3 /* SimpleBasketballScore.xcdatamodeld */; };
+		31F3531529C2F127009F69C3 /* inGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F3531429C2F127009F69C3 /* inGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3105734D29CFC7A90066E1F2 /* WhoScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoScoreView.swift; sourceTree = "<group>"; };
+		3189F10129DA41E000786D18 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		3189F10429DA42CF00786D18 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		3195812629DA4E1B00EBC8F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		31CCE6DD29DA95A400B42585 /* boxscoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxscoreView.swift; sourceTree = "<group>"; };
 		31F352FB29C2F051009F69C3 /* SimpleBasketballScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBasketballScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F352FE29C2F051009F69C3 /* SimpleBasketballScoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBasketballScoreApp.swift; sourceTree = "<group>"; };
 		31F3530029C2F051009F69C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +36,7 @@
 		31F3530529C2F053009F69C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		31F3530729C2F053009F69C3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		31F3530A29C2F053009F69C3 /* SimpleBasketballScore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleBasketballScore.xcdatamodel; sourceTree = "<group>"; };
+		31F3531429C2F127009F69C3 /* inGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,12 +44,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3195812A29DA4E5B00EBC8F3 /* FirebaseFirestore in Frameworks */,
+				3195812C29DA4E5B00EBC8F3 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3189F10029DA41CF00786D18 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3189F10129DA41E000786D18 /* PlayerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3189F10329DA42BE00786D18 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3189F10429DA42CF00786D18 /* PlayerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		31F352F229C2F051009F69C3 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +87,15 @@
 		31F352FD29C2F051009F69C3 /* SimpleBasketballScore */ = {
 			isa = PBXGroup;
 			children = (
-				31F352FE29C2F051009F69C3 /* SimpleBasketballScoreApp.swift */,
+				3189F10329DA42BE00786D18 /* ViewModels */,
+				3189F10029DA41CF00786D18 /* Models */,
+				31F3531329C2F108009F69C3 /* Views */,
 				31F3530029C2F051009F69C3 /* ContentView.swift */,
+				31F352FE29C2F051009F69C3 /* SimpleBasketballScoreApp.swift */,
 				31F3530229C2F053009F69C3 /* Assets.xcassets */,
 				31F3530729C2F053009F69C3 /* Persistence.swift */,
 				31F3530929C2F053009F69C3 /* SimpleBasketballScore.xcdatamodeld */,
+				3195812629DA4E1B00EBC8F3 /* GoogleService-Info.plist */,
 				31F3530429C2F053009F69C3 /* Preview Content */,
 			);
 			path = SimpleBasketballScore;
@@ -71,6 +107,16 @@
 				31F3530529C2F053009F69C3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		31F3531329C2F108009F69C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31F3531429C2F127009F69C3 /* inGameView.swift */,
+				3105734D29CFC7A90066E1F2 /* WhoScoreView.swift */,
+				31CCE6DD29DA95A400B42585 /* boxscoreView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +135,10 @@
 			dependencies = (
 			);
 			name = SimpleBasketballScore;
+			packageProductDependencies = (
+				3195812929DA4E5B00EBC8F3 /* FirebaseFirestore */,
+				3195812B29DA4E5B00EBC8F3 /* FirebaseFirestoreSwift */,
+			);
 			productName = SimpleBasketballScore;
 			productReference = 31F352FB29C2F051009F69C3 /* SimpleBasketballScore.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +167,9 @@
 				Base,
 			);
 			mainGroup = 31F352F229C2F051009F69C3;
+			packageReferences = (
+				3195812829DA4E5B00EBC8F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 31F352FC29C2F051009F69C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,6 +186,7 @@
 			files = (
 				31F3530629C2F053009F69C3 /* Preview Assets.xcassets in Resources */,
 				31F3530329C2F053009F69C3 /* Assets.xcassets in Resources */,
+				3195812729DA4E1B00EBC8F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,10 +197,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3105734E29CFC7A90066E1F2 /* WhoScoreView.swift in Sources */,
+				3189F10529DA42CF00786D18 /* PlayerViewModel.swift in Sources */,
 				31F3530829C2F053009F69C3 /* Persistence.swift in Sources */,
+				31CCE6DE29DA95A400B42585 /* boxscoreView.swift in Sources */,
 				31F3530B29C2F053009F69C3 /* SimpleBasketballScore.xcdatamodeld in Sources */,
+				31F3531529C2F127009F69C3 /* inGameView.swift in Sources */,
 				31F3530129C2F051009F69C3 /* ContentView.swift in Sources */,
 				31F352FF29C2F051009F69C3 /* SimpleBasketballScoreApp.swift in Sources */,
+				3189F10229DA41E000786D18 /* PlayerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +340,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,6 +348,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = KojiroTsugaru.SimpleBasketballScore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,8 +371,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +379,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = KojiroTsugaru.SimpleBasketballScore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,6 +410,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3195812829DA4E5B00EBC8F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3195812929DA4E5B00EBC8F3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3195812829DA4E5B00EBC8F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3195812B29DA4E5B00EBC8F3 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3195812829DA4E5B00EBC8F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		31F3530929C2F053009F69C3 /* SimpleBasketballScore.xcdatamodeld */ = {
