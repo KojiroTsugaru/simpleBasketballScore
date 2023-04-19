@@ -29,7 +29,6 @@ struct PlayerModel: Identifiable {
     var block: Int
     var foul: Int
     
-    mutating func updataPoint(p: Int) {
-        self.point += p
-    }
+    // team
+    var team: String = ""
 }

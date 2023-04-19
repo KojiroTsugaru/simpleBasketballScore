@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct inGameView: View {
-    
     fileprivate func statButton(name: String) -> some View {
         return NavigationLink(destination: WhoScoreView(stat: name)) {
             Text(name)
@@ -140,6 +139,7 @@ struct inGameView: View {
             .navigationViewStyle(StackNavigationViewStyle())
     }
 }
+
 
 struct inGameView_Previews: PreviewProvider {
     static var previews: some View {

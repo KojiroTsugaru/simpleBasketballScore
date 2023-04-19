@@ -14,6 +14,10 @@ class PlayerViewModel: ObservableObject {
     
     @Published var players = [PlayerModel]()
     
+    init() {
+        self.getData()
+    }
+    
     func addData(name: String, number: String) {
         let db = Firestore.firestore()
         let playerCollection = db.collection("Player")

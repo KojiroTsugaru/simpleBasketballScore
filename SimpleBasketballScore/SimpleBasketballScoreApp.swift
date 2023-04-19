@@ -24,7 +24,7 @@ struct SimpleBasketballScoreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            inGameView()
+            HomeView()
         }
     }
 }

@@ -15,7 +15,7 @@ struct WhoScoreView: View {
     let statTapped: String?
     
     // cell for each player
-    fileprivate func playerCellView( player: PlayerModel) -> ZStack<some View> {
+    fileprivate func playerCellView(player: PlayerModel) -> ZStack<some View> {
         let backgroundColor = player.isOpponent ? Color(.systemRed) : Color(.systemGreen)
         return ZStack{
                 RoundedRectangle(cornerRadius: 15)
