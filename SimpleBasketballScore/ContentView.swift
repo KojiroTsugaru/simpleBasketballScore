@@ -17,6 +17,7 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
     
     // player view model
+//    let sampleTeam = TeamModel(id: <#T##String#>, name: <#T##String#>, logo: <#T##String#>, win: <#T##Int#>, loss: <#T##Int#>, league: <#T##String#>)
     @ObservedObject var model = PlayerViewModel()
     
     var body: some View {

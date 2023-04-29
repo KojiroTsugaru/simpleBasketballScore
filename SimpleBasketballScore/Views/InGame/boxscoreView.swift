@@ -43,12 +43,12 @@ struct boxscoreView: View {
                     Table(model.players) {
                         TableColumn("Name"){ p in Text(p.fullname)}
                             .width(150)
-                        TableColumn("PTS"){ p in Text("\(p.point)")}
+                        TableColumn("PTS"){ p in Text("\(p.total_point)")}
                         TableColumn("REB"){ p in Text("\(p.to_reb)")}
                         TableColumn("AST"){ p in Text("\(p.assist)")}
                         TableColumn("STL"){ p in Text("\(p.steal)")}
                         TableColumn("BLK"){ p in Text("\(p.block)")}
-                        TableColumn("PTS"){ p in Text("\(p.point)")}
+                        TableColumn("PTS"){ p in Text("\(p.total_point)")}
                         TableColumn("REB"){ p in Text("\(p.to_reb)")}
                         TableColumn("AST"){ p in Text("\(p.assist)")}
                         TableColumn("STL"){ p in Text("\(p.steal)")}
@@ -65,12 +65,12 @@ struct boxscoreView: View {
                     Table(model.players) {
                         TableColumn("Name"){ p in Text(p.fullname)}
                             .width(150)
-                        TableColumn("PTS"){ p in Text("\(p.point)")}
+                        TableColumn("PTS"){ p in Text("\(p.total_point)")}
                         TableColumn("REB"){ p in Text("\(p.to_reb)")}
                         TableColumn("AST"){ p in Text("\(p.assist)")}
                         TableColumn("STL"){ p in Text("\(p.steal)")}
                         TableColumn("BLK"){ p in Text("\(p.block)")}
-                        TableColumn("PTS"){ p in Text("\(p.point)")}
+                        TableColumn("PTS"){ p in Text("\(p.total_point)")}
                         TableColumn("REB"){ p in Text("\(p.to_reb)")}
                         TableColumn("AST"){ p in Text("\(p.assist)")}
                         TableColumn("STL"){ p in Text("\(p.steal)")}

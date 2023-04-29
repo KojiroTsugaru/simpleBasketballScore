@@ -1,17 +1,19 @@
 //
-//  TeamViewModel.swift
+//  GameViewModel.swift
 //  SimpleBasketballScore
 //
-//  Created by KJ on 4/18/23.
+//  Created by KJ on 4/29/23.
 //
+
+import Foundation
 
 import Foundation
 import FirebaseCore
 import FirebaseFirestore
 import Firebase
 
-class TeamViewModel: ObservableObject {
-    @Published var teams = [TeamModel]()
+class GameViewModel: ObservableObject {
+    @Published var games = [GameModel]()
     
     init() {
         self.getData()

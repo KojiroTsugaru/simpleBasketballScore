@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct inGameView: View {
+    
+//    let gameToPlay: GameModel?
+    
+    lazy var sampleTeam = TeamModel(id: "", name: "", logo: "", win: 0, loss: 0, league: "")
+    lazy var gameToPlay = GameModel(opponent_name: "", opponent_logo: "", opponent_league: "", team: sampleTeam )
+//
+    // for stats buttons
     fileprivate func statButton(name: String) -> some View {
-        return NavigationLink(destination: WhoScoreView(stat: name)) {
+        return NavigationLink(destination: WhoScoreView(stat: name) {
             Text(name)
                 .font(.system(size: 50))
                 .foregroundColor(.black)
@@ -67,12 +74,12 @@ struct inGameView: View {
                             .foregroundColor(.white)
                             .shadow(color: .gray.opacity(0.2), radius: 10, x: 1, y: 1)
                         VStack(){
-                            Text("Team 1\t\t60")
+                            Text("\(gameToPlay.name ?? "")\t\t60")
                                 .font(.system(size: 30))
                                 .bold()
                                 .padding(.top, 50)
                                 .padding(.bottom, 2)
-                            Text("Team 2\t\t74")
+                            Text("\(gameToPlay.opponent_name ?? "")\t\t74")
                                 .font(.system(size: 30))
                                 .bold()
 
@@ -141,9 +148,9 @@ struct inGameView: View {
 }
 
 
-struct inGameView_Previews: PreviewProvider {
-    static var previews: some View {
-        inGameView()
-            .previewInterfaceOrientation(.landscapeRight)
-    }
-}
+//struct inGameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        inGameView()
+//            .previewInterfaceOrientation(.landscapeRight)
+//    }
+//}

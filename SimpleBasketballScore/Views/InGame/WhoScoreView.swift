@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WhoScoreView: View {
     // player view model
-    @ObservedObject var model = PlayerViewModel()
+    @ObservedObject var model: PlayerViewModel
     
     @Environment(\.presentationMode) var presentationMode
     let statTapped: String?
@@ -67,14 +67,15 @@ struct WhoScoreView: View {
         }
     }
     
-    init(stat: String) {
+    init(stat: String, team: TeamModel) {
+        self.model.team = team
         self.statTapped = stat
-        model.getData()
     }
 }
-struct WhoScoreView_Previews: PreviewProvider {
-    static var previews: some View {
-        WhoScoreView(stat: "1pt")
-            .previewInterfaceOrientation(.landscapeRight)
-    }
-}
+
+//struct WhoScoreView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WhoScoreView(stat: "1pt", )
+//            .previewInterfaceOrientation(.landscapeRight)
+//    }
+//}

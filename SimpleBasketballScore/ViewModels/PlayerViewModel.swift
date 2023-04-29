@@ -12,9 +12,11 @@ import Firebase
 
 class PlayerViewModel: ObservableObject {
     
+    var team: TeamModel
     @Published var players = [PlayerModel]()
     
-    init() {
+    init(team: TeamModel) {
+        self.team = team
         self.getData()
     }
     
@@ -49,16 +51,16 @@ class PlayerViewModel: ObservableObject {
         var updatedStat: Int?
         switch(stat) {
         case "1pt":
-            statToUpdate = "point"
-            updatedStat = playerUpdate.point + 1
+            statToUpdate = "one_point"
+            updatedStat = playerUpdate.one_point + 1
             break
         case "2pt":
-            statToUpdate = "point"
-            updatedStat = playerUpdate.point + 2
+            statToUpdate = "two_point"
+            updatedStat = playerUpdate.two_point + 2
             break
         case "3pt":
-            statToUpdate = "point"
-            updatedStat = playerUpdate.point + 3
+            statToUpdate = "three_point"
+            updatedStat = playerUpdate.three_point + 3
             break
         case "Def\n reb":
             statToUpdate = "defReb"
@@ -106,16 +108,17 @@ class PlayerViewModel: ObservableObject {
     func getData() {
         // get reference to database
         let db = Firestore.firestore()
-        // read documents
-        let playerCollection = db.collection("Player")
-        
+        // get reference to Player collection on firebase
+        let teamCollection = db.collection("Teams").document(team.id)
+        let playerCollection = teamCollection.collection("Players")
+
         playerCollection.getDocuments { (snapshot, error) in
             if error == nil {
                 if let snapshot = snapshot{
-                    
+
                     // update the players property
                     DispatchQueue.main.async {
-                        
+
                         // Get all the documents and create Todos
                         self.players = snapshot.documents.map { d in
                             return PlayerModel(id: d.documentID,
@@ -124,7 +127,9 @@ class PlayerViewModel: ObservableObject {
                                                number: d["number"] as? String ?? "",
                                                picture: "kevin_durant",
                                                isOpponent: false,
-                                               point: d["point"] as? Int ?? 0,
+                                               three_point: d["point"] as? Int ?? 0,
+                                               two_point: d["two_point"] as? Int ?? 0,
+                                               one_point: d["one_point"] as? Int ?? 0,
                                                assist: d["assist"] as? Int ?? 0,
                                                def_reb: d["assist"] as? Int ?? 0,
                                                off_reb: d["assist"] as? Int ?? 0,
@@ -141,5 +146,34 @@ class PlayerViewModel: ObservableObject {
             }
         }
     }
+    
+//    func getData() {
+//        // get reference to database
+//        let db = Firestore.firestore()
+//        // read documents
+//        let teamCollection = db.collection("Teams").document(team.id)
+//        let playerCollection = teamCollection.collection("Players")
+//
+//        playerCollection.getDocuments { (snapshot, error) in
+//            if error == nil {
+//                if let snapshot = snapshot{
+//
+//                    // update the players property
+//                    DispatchQueue.main.async {
+//
+//                        // Get all the documents and create Todos
+//                        for document in documents {
+//                            let playerCollection = document.collection("Players")
+//                                data.append(myData)
+//                            }
+//
+//                    }
+//                }
+//            }
+//            else {
+//                print("Error fetching documents")
+//            }
+//        }
+//    }
     
 }

@@ -19,7 +19,13 @@ struct PlayerModel: Identifiable {
     var onPlay: Bool = false
     
     // data for all the player stats
-    var point: Int
+    
+    // for points
+    var three_point: Int
+    var two_point: Int
+    var one_point: Int
+    var total_point: Int { three_point + two_point + one_point }
+    
     var assist: Int
     var def_reb: Int
     var off_reb: Int

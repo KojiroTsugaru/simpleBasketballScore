@@ -12,10 +12,12 @@ struct TeamSelectView: View {
     @Binding var isShowNewGame: Bool
     @Binding var inGameView: Bool
     
+    @Binding var game: GameModel?
+    
     var body: some View {
             List(model.teams){ t in
                 NavigationLink {
-                    SelectOpponentView(isShowNewGame: $isShowNewGame, inGameView: $inGameView, teamSelected: t)
+                    SelectOpponentView(isShowNewGame: $isShowNewGame, inGameView: $inGameView, gameToPlay: $game, teamSelected: t)
                 } label: {
                     HStack{
                         Image(t.logo)
@@ -29,19 +31,19 @@ struct TeamSelectView: View {
                             Text(t.league)
                                 .font(.title2)
                         }
-                    }
+                    }   
                         .foregroundColor(.black)
                 }
             }
     }
 }
 
-struct TeamSelectView_Previews: PreviewProvider {
-    @State static var isShowNewGame = true
-    @State static var inGameView = false
-    
-    static var previews: some View {
-        TeamSelectView(isShowNewGame: $isShowNewGame, inGameView: $inGameView)
-            .previewInterfaceOrientation(.landscapeRight)
-        }
-    }
+//struct TeamSelectView_Previews: PreviewProvider {
+//    @State static var isShowNewGame = true
+//    @State static var inGameView = false
+//
+//    static var previews: some View {
+//        TeamSelectView(isShowNewGame: $isShowNewGame, inGameView: $inGameView, team: <#Binding<TeamModel>#>)
+//            .previewInterfaceOrientation(.landscapeRight)
+//        }
+//    }

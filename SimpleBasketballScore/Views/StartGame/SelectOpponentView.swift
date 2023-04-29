@@ -14,6 +14,10 @@ struct SelectOpponentView: View {
     // for sheet and inGameView
     @Binding var isShowNewGame: Bool
     @Binding var inGameView: Bool
+    
+    @Binding var gameToPlay: GameModel?
+    
+    // for team selected
     let teamSelected: TeamModel
     
     var body: some View {
@@ -36,7 +40,11 @@ struct SelectOpponentView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
-                    teamSelected.addOpponent(name: teamname, logo: "kevin_durant", league: "NBA")
+                    let game = GameModel(opponent_name: teamname, opponent_logo: "kevin_durant", opponent_league: "NBA", team: teamSelected)
+                    gameToPlay = game
+                    // add game to Firebase here?
+                    teamSelected.addGame(opponent_name: teamname, opponent_logo: "kevin_durant", opponent_league: "NBA")
+                    
                     isShowNewGame = false
                     inGameView = true
                 } label: {
@@ -52,8 +60,8 @@ struct SelectOpponentView: View {
 //    @State static var isShowNewGame = true
 //    @State static var inGameView = false
 //
-//    static var previews: some View {
-//        SelectOpponentView(team: <#TeamModel#>, isShowNewGame: $isShowNewGame, inGameView: $inGameView)
-//            .previewInterfaceOrientation(.landscapeRight)
-//    }
-//}
+////    static var previews: some View {
+////        SelectOpponentView(team: <#TeamModel#>, isShowNewGame: $isShowNewGame, inGameView: $inGameView)
+////            .previewInterfaceOrientation(.landscapeRight)
+////    }
+////}

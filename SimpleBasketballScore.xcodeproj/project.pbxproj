@@ -17,10 +17,10 @@
 		31CCB07629E544DA001B8C8C /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CCB07529E544DA001B8C8C /* TeamView.swift */; };
 		31CCE6DE29DA95A400B42585 /* boxscoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CCE6DD29DA95A400B42585 /* boxscoreView.swift */; };
 		31D4D29A29E5F35300502FA5 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D4D29929E5F35300502FA5 /* TeamModel.swift */; };
+		31DA735929FDD9C500242FF5 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DA735829FDD9C500242FF5 /* GameViewModel.swift */; };
 		31E1711C29E8982F009EE162 /* TeamSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1711B29E8982F009EE162 /* TeamSelectView.swift */; };
 		31E1711E29E8FC2D009EE162 /* SelectOpponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1711D29E8FC2D009EE162 /* SelectOpponentView.swift */; };
 		31E1712229EF7011009EE162 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1712129EF7011009EE162 /* TeamViewModel.swift */; };
-		31E1712429EF894B009EE162 /* OpponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1712329EF894B009EE162 /* OpponentModel.swift */; };
 		31E1712629EF9146009EE162 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1712529EF9146009EE162 /* GameModel.swift */; };
 		31F352FF29C2F051009F69C3 /* SimpleBasketballScoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F352FE29C2F051009F69C3 /* SimpleBasketballScoreApp.swift */; };
 		31F3530129C2F051009F69C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F3530029C2F051009F69C3 /* ContentView.swift */; };
@@ -40,10 +40,10 @@
 		31CCB07529E544DA001B8C8C /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		31CCE6DD29DA95A400B42585 /* boxscoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxscoreView.swift; sourceTree = "<group>"; };
 		31D4D29929E5F35300502FA5 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		31DA735829FDD9C500242FF5 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		31E1711B29E8982F009EE162 /* TeamSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectView.swift; sourceTree = "<group>"; };
 		31E1711D29E8FC2D009EE162 /* SelectOpponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOpponentView.swift; sourceTree = "<group>"; };
 		31E1712129EF7011009EE162 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
-		31E1712329EF894B009EE162 /* OpponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentModel.swift; sourceTree = "<group>"; };
 		31E1712529EF9146009EE162 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		31F352FB29C2F051009F69C3 /* SimpleBasketballScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBasketballScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F352FE29C2F051009F69C3 /* SimpleBasketballScoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBasketballScoreApp.swift; sourceTree = "<group>"; };
@@ -72,9 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				3189F10129DA41E000786D18 /* PlayerModel.swift */,
-				31D4D29929E5F35300502FA5 /* TeamModel.swift */,
-				31E1712329EF894B009EE162 /* OpponentModel.swift */,
 				31E1712529EF9146009EE162 /* GameModel.swift */,
+				31D4D29929E5F35300502FA5 /* TeamModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -84,17 +83,28 @@
 			children = (
 				3189F10429DA42CF00786D18 /* PlayerViewModel.swift */,
 				31E1712129EF7011009EE162 /* TeamViewModel.swift */,
+				31DA735829FDD9C500242FF5 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		31E1711A29E8978C009EE162 /* NewGame */ = {
+		31BCFD3C29FB1A9F000ACADB /* InGame */ = {
+			isa = PBXGroup;
+			children = (
+				31F3531429C2F127009F69C3 /* inGameView.swift */,
+				3105734D29CFC7A90066E1F2 /* WhoScoreView.swift */,
+				31CCE6DD29DA95A400B42585 /* boxscoreView.swift */,
+			);
+			path = InGame;
+			sourceTree = "<group>";
+		};
+		31E1711A29E8978C009EE162 /* StartGame */ = {
 			isa = PBXGroup;
 			children = (
 				31E1711B29E8982F009EE162 /* TeamSelectView.swift */,
 				31E1711D29E8FC2D009EE162 /* SelectOpponentView.swift */,
 			);
-			path = NewGame;
+			path = StartGame;
 			sourceTree = "<group>";
 		};
 		31F352F229C2F051009F69C3 = {
@@ -141,12 +151,10 @@
 		31F3531329C2F108009F69C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				31E1711A29E8978C009EE162 /* NewGame */,
-				31F3531429C2F127009F69C3 /* inGameView.swift */,
-				3105734D29CFC7A90066E1F2 /* WhoScoreView.swift */,
-				31CCE6DD29DA95A400B42585 /* boxscoreView.swift */,
-				31CCB07529E544DA001B8C8C /* TeamView.swift */,
 				311605CC29DFBEDE008825C8 /* HomeView.swift */,
+				31E1711A29E8978C009EE162 /* StartGame */,
+				31BCFD3C29FB1A9F000ACADB /* InGame */,
+				31CCB07529E544DA001B8C8C /* TeamView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,12 +239,12 @@
 			files = (
 				3105734E29CFC7A90066E1F2 /* WhoScoreView.swift in Sources */,
 				3189F10529DA42CF00786D18 /* PlayerViewModel.swift in Sources */,
-				31E1712429EF894B009EE162 /* OpponentModel.swift in Sources */,
 				31D4D29A29E5F35300502FA5 /* TeamModel.swift in Sources */,
 				31CCB07629E544DA001B8C8C /* TeamView.swift in Sources */,
 				31F3530829C2F053009F69C3 /* Persistence.swift in Sources */,
 				31E1712229EF7011009EE162 /* TeamViewModel.swift in Sources */,
 				311605CD29DFBEDE008825C8 /* HomeView.swift in Sources */,
+				31DA735929FDD9C500242FF5 /* GameViewModel.swift in Sources */,
 				31E1711C29E8982F009EE162 /* TeamSelectView.swift in Sources */,
 				31CCE6DE29DA95A400B42585 /* boxscoreView.swift in Sources */,
 				31F3530B29C2F053009F69C3 /* SimpleBasketballScore.xcdatamodeld in Sources */,

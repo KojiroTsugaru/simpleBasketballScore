@@ -9,15 +9,23 @@ import SwiftUI
 
 struct TeamItem: View {
     // team model
-    var team: TeamModel
+    let team: TeamModel
     
     var body: some View {
         HStack(alignment: .top) {
-            Text(team.name)
-                .font(.system(size: 24)).bold()
-                .foregroundColor(.black)
-                .padding(.top, 30)
-                .padding(.bottom)
+            VStack{
+                Text(team.name)
+                    .font(.system(size: 24)).bold()
+                    .foregroundColor(.black)
+                    .padding(.top, 30)
+                    .padding(.bottom)
+                ForEach(team.games) { g in
+                    Text(g.opponent_name)
+                        .font(.system(size: 10)).bold()
+                        .foregroundColor(.black)
+                        .padding()
+                }
+            }
         }
         .padding(.horizontal, 20)
         .frame(width: 1100, height: 650)

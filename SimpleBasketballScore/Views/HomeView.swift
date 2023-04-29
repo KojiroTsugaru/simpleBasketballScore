@@ -10,16 +10,14 @@ import SwiftUI
 struct HomeView: View {
     // for sheet
     @State private var isShowNewGame = false
-    
     // to move to inGame view after game setting
     @State private var inGameView = false
     
     @State private var teamname: String = ""
     @ObservedObject var model = PlayerViewModel()
     
-    // for score on the top
-    @State private var ally_score: Int = 0
-    @State private var opponent_score: Int = 0
+    // team selected in TeamSelectView
+    @State var gameToPlay: GameModel?
     
     init() {
         model.getData()
@@ -94,7 +92,7 @@ struct HomeView: View {
             
             .sheet(isPresented: $isShowNewGame, onDismiss: nil){
                 NavigationView {
-                    TeamSelectView(isShowNewGame: $isShowNewGame, inGameView: $inGameView)
+                    TeamSelectView(isShowNewGame: $isShowNewGame, inGameView: $inGameView, game: $gameToPlay)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {
                             Button("Cancel", action: { isShowNewGame.toggle() })
@@ -106,7 +104,9 @@ struct HomeView: View {
                 }
             }
         }
-        else { SimpleBasketballScore.inGameView() }
+        // show inGameView!
+        else {
+            SimpleBasketballScore.inGameView(gameToPlay: gameToPlay) }
     }
 }
 
